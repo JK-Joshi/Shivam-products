@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&display=swap");
+
+body {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: "Epilogue", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background: #eee;
+}
+
+.creative-parallax--slider {
+    background: grey;
+    min-height: 90vh;
+}
+
+.creative-parallax--slider .f-slider-layer {
+    position: relative;
+    height: 90vh;
+}
+
+.creative-parallax--slider .swiper-slide.swiper-slide-active:before {
+    content: "";
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: skew(-30deg, 0deg);
+    /* Keep this static */
+    z-index: 1;
+    opacity: 0.5;
+    background-color: #295f2d;
+    animation: fadeInTwo 2.3s ease-in-out;
+}
+
+
+.creative-parallax--slider .f-slider-layer img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.creative-parallax--slider .f-slider-layer:before {
+    content: "";
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+}
+
+/* Text centered by default */
+.creative-parallax--slider .f-slider-one-data {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 50%;
+    padding: 0 5%;
+    text-align: left;
+    z-index: 9;
+}
+
+.creative-parallax--slider .f-slider-one-data h1 {
+    font-size: 67px;
+    line-height: 87px;
+    color: #f7f7f7;
+    margin-bottom: 10px;
+    opacity: 0;
+    width: 100%;
+}
+
+.swiper-slide-active .f-slider-one-data h1 {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.f-slider-layer .f-slider-one-data p {
+    font-size: 20px;
+    line-height: 30px;
+    color: #f7f7f7;
+    opacity: 0;
+    width: 100%;
+}
+
+.swiper-slide-active .f-slider-one-data p {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.f-slider-layer .slide-btn {
+    text-decoration: none;
+    background-color: #295f2d;
+    padding: 18px 70px 18px 50px;
+    font-size: 16px;
+    color: #f7f7f7;
+    display: inline-flex;
+    position: relative;
+    border: 0px solid #295f2d;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    margin-top: 20px;
+}
+
+.swiper-slide-active .f-slider-layer .slide-btn {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 2s;
+}
+
+/* Swiper Navigation - Always on the right */
+.swiper-nav {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 10;
+    display: flex;
+    gap: 25px;
+}
+
+.swiper-nav button {
+    width: 80px;
+    height: 80px;
+    background: #295f2d;
+    color: #ffffff;
+    border: 2px solid #295f2d;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(41, 95, 45, 0.2);
+    border-radius: 50%;
+}
+
+.swiper-nav button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.swiper-nav button:hover::before {
+    transform: translateX(0);
+}
+
+.swiper-nav button:hover {
+    color: #295f2d;
+    border-color: #ffffff;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(41, 95, 45, 0.3);
+}
+
+.swiper-nav button i,
+.swiper-nav button svg {
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.swiper-nav button:hover i,
+.swiper-nav button:hover svg {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .creative-parallax--slider .swiper-slide.swiper-slide-active:before {
+        width: 350px;
+    }
+
+    .creative-parallax--slider {
+        min-height: 90dvh;
+    }
+
+    .creative-parallax--slider .f-slider-layer {
+        height: 90dvh;
+    }
+
+    /* Move text to the top with more space */
+    .creative-parallax--slider .f-slider-one-data {
+        top: 20%;
+        transform: none;
+        padding: 0 5%;
+    }
+
+    .creative-parallax--slider .f-slider-one-data h1 {
+        font-size: 50px;
+        line-height: 65px;
+    }
+
+    .f-slider-layer .f-slider-one-data p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .swiper-nav {
+        bottom: 30px;
+        right: 30px;
+        gap: 20px;
+    }
+    
+    .swiper-nav button {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .swiper-nav button i,
+    .swiper-nav button svg {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .creative-parallax--slider .swiper-slide.swiper-slide-active:before {
+        width: 250px;
+    }
+
+    .creative-parallax--slider .f-slider-one-data {
+        width: 100%;
+        top: 25%;
+        padding: 0 3%;
+        text-align: center;
+    }
+
+    .creative-parallax--slider .f-slider-one-data h1 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+    .f-slider-layer .f-slider-one-data p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .swiper-nav {
+        bottom: 25px;
+        right: 25px;
+        gap: 15px;
+    }
+    
+    .swiper-nav button {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .swiper-nav button i,
+    .swiper-nav button svg {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .creative-parallax--slider .swiper-slide.swiper-slide-active:before {
+        width: 180px;
+    }
+
+    .creative-parallax--slider .f-slider-one-data {
+        top: 30%;
+        padding: 0 2%;
+    }
+
+    .creative-parallax--slider .f-slider-one-data h1 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .f-slider-layer .f-slider-one-data p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .f-slider-layer .slide-btn {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+
+    .swiper-nav {
+        bottom: 20px;
+        right: 20px;
+        gap: 12px;
+    }
+    
+    .swiper-nav button {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .swiper-nav button i,
+    .swiper-nav button svg {
+        font-size: 1.4rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInTwo {
+    0% {
+        opacity: 0;
+        transform: skew(-30deg, 0deg);
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: skew(-30deg, 0deg);
+    }
+}
