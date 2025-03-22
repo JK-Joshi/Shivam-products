@@ -16,7 +16,6 @@ import n4 from '../Assets/Nobes/4.jpg'
 import n5 from '../Assets/Nobes/5.jpg'
 import n6 from '../Assets/Nobes/6.jpg'
 import n7 from '../Assets/Nobes/7.jpg'
-import n8 from '../Assets/Nobes/8.jpg'
 import n9 from '../Assets/Nobes/9.jpg'
 import n11 from '../Assets/Nobes/11.jpg'
 import n12 from '../Assets/Nobes/12.jpg'
@@ -311,15 +310,6 @@ export const nobesProducts = [
         productImageAltText: "Art deco style door nobe",
         productDescription: "Art deco style door nobe with vintage aesthetics. Perfect for period homes and themed interiors.",
         urlSlug: "art-deco-door-nobe",
-        category: "nobes"
-    },
-    {
-        id: "n8",
-        productName: "Minimalist Door Handle",
-        productsImage: n8,
-        productImageAltText: "Minimalist door handle with clean design",
-        productDescription: "Clean minimalist door handle with simple design. Ideal for modern minimalist interiors.",
-        urlSlug: "minimalist-door-handle",
         category: "nobes"
     },
     {
