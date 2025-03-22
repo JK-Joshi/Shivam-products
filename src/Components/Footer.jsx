@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Grid, Typography, Box, Divider, IconButton } from '@mui/material';
 import { Facebook, Twitter, LinkedIn, LocationOn, Email } from '@mui/icons-material';
 import { ColorHelper } from '../Helper/ColorHelper';
 import { Link as RouterLink } from 'react-router-dom';
 import { productCategories } from '../Constants/ProductImages';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Footer = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 })
+    })
+
     const quickLinks = [
         { title: 'Home', path: '/' },
         { title: 'About us', path: '/about' },
@@ -54,7 +62,7 @@ const Footer = () => {
             <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
                 <Grid container spacing={4} justifyContent="space-around">
                     {/* About Us */}
-                    <Grid item xs={12} sm={6} md={3}>
+                    <Grid item xs={12} sm={6} md={3} data-aos="fade-right" data-aos-once="true">
                         <Typography variant="h6" sx={{
                             fontWeight: 600,
                             mb: 3,
@@ -82,7 +90,7 @@ const Footer = () => {
                     </Grid>
 
                     {/* Quick Links */}
-                    <Grid item xs={12} sm={6} md={3}>
+                    <Grid item xs={12} sm={6} md={3} data-aos="fade-right" data-aos-once="true">
                         <Typography variant="h6" sx={{
                             fontWeight: 600,
                             mb: 3,
@@ -153,7 +161,7 @@ const Footer = () => {
                     </Grid>
 
                     {/* Our Products */}
-                    <Grid item xs={12} sm={6} md={3}>
+                    <Grid item xs={12} sm={6} md={3} data-aos="fade-left" data-aos-once="true">
                         <Typography variant="h6" sx={{
                             fontWeight: 600,
                             mb: 3,
@@ -224,7 +232,7 @@ const Footer = () => {
                     </Grid>
 
                     {/* Contact Info */}
-                    <Grid item xs={12} sm={6} md={3}>
+                    <Grid item xs={12} sm={6} md={3} data-aos="fade-left" data-aos-once="true">
                         <Typography variant="h6" sx={{
                             fontWeight: 600,
                             mb: 3,
@@ -322,7 +330,7 @@ const Footer = () => {
                     alignItems: 'center',
                     flexWrap: 'wrap',
                     gap: 2
-                }}>
+                }} data-aos="fade-up" data-aos-once="true">
                     <Typography variant="body2" sx={{ opacity: 0.9 }}>
                         © {new Date().getFullYear()} Shivam Products. All rights reserved.
                     </Typography>

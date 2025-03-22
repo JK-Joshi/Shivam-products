@@ -16,56 +16,56 @@ import n4 from '../Assets/Nobes/4.jpg'
 import n5 from '../Assets/Nobes/5.jpg'
 import n6 from '../Assets/Nobes/6.jpg'
 import n7 from '../Assets/Nobes/7.jpg'
-import n8 from '../Assets/Nobes/8.JPG'
-import n9 from '../Assets/Nobes/9.JPG'
-import n11 from '../Assets/Nobes/11.JPG'
-import n12 from '../Assets/Nobes/12.JPG'
-import n13 from '../Assets/Nobes/13.JPG'
-import n14 from '../Assets/Nobes/14.JPG'
-import n15 from '../Assets/Nobes/15.JPG'
-import n16 from '../Assets/Nobes/16.JPG'
-import n17 from '../Assets/Nobes/17.JPG'
-import n18 from '../Assets/Nobes/18.JPG'
-import n19 from '../Assets/Nobes/19.JPG'
-import n20 from '../Assets/Nobes/20.JPG'
-import n21 from '../Assets/Nobes/21.JPG'
-import n22 from '../Assets/Nobes/22.JPG'
-import n23 from '../Assets/Nobes/23.JPG'
-import n24 from '../Assets/Nobes/24.JPG'
+import n8 from '../Assets/Nobes/8.jpg'
+import n9 from '../Assets/Nobes/9.jpg'
+import n11 from '../Assets/Nobes/11.jpg'
+import n12 from '../Assets/Nobes/12.jpg'
+import n13 from '../Assets/Nobes/13.jpg'
+import n14 from '../Assets/Nobes/14.jpg'
+import n15 from '../Assets/Nobes/15.jpg'
+import n16 from '../Assets/Nobes/16.jpg'
+import n17 from '../Assets/Nobes/17.jpg'
+import n18 from '../Assets/Nobes/18.jpg'
+import n19 from '../Assets/Nobes/19.jpg'
+import n20 from '../Assets/Nobes/20.jpg'
+import n21 from '../Assets/Nobes/21.jpg'
+import n22 from '../Assets/Nobes/22.jpg'
+import n23 from '../Assets/Nobes/23.jpg'
+import n24 from '../Assets/Nobes/24.jpg'
 import n25 from '../Assets/Nobes/25.jpg'
 import n26 from '../Assets/Nobes/26.jpeg'
 import n27 from '../Assets/Nobes/27.jpeg'
 import n28 from '../Assets/Nobes/28.jpeg'
 import n29 from '../Assets/Nobes/29.jpeg'
-import ml1 from '../Assets/MakerLocks/1.JPG'
-import ml2 from '../Assets/MakerLocks/2.JPG'
-import ml3 from '../Assets/MakerLocks/3.JPG'
-import ml4 from '../Assets/MakerLocks/4.JPG'
-import ml5 from '../Assets/MakerLocks/5.JPG'
-import ml6 from '../Assets/MakerLocks/6.JPG'
-import ml7 from '../Assets/MakerLocks/7.JPG'
-import ml8 from '../Assets/MakerLocks/8.JPG'
-import ml9 from '../Assets/MakerLocks/9.JPG'
-import ml10 from '../Assets/MakerLocks/10.JPG'
-import ml11 from '../Assets/MakerLocks/11.JPG'
-import ml12 from '../Assets/MakerLocks/12.JPG'
-import ml13 from '../Assets/MakerLocks/13.JPG'
-import ml14 from '../Assets/MakerLocks/14.JPG'
-import ml15 from '../Assets/MakerLocks/15.JPG'
-import ml16 from '../Assets/MakerLocks/16.JPG'
-import ml17 from '../Assets/MakerLocks/17.JPG'
-import ml18 from '../Assets/MakerLocks/18.JPG'
-import ml19 from '../Assets/MakerLocks/19.JPG'
-import ml20 from '../Assets/MakerLocks/20.JPG'
-import ml21 from '../Assets/MakerLocks/21.JPG'
-import ml22 from '../Assets/MakerLocks/22.JPG'
-import ml23 from '../Assets/MakerLocks/23.JPG'
-import ml24 from '../Assets/MakerLocks/24.JPG'
-import ml25 from '../Assets/MakerLocks/25.JPG'
-import ml26 from '../Assets/MakerLocks/26.JPG'
-import ml27 from '../Assets/MakerLocks/27.JPG'
-import ml28 from '../Assets/MakerLocks/28.JPG'
-import ml29 from '../Assets/MakerLocks/29.JPG'
+import ml1 from '../Assets/MakerLocks/1.jpg'
+import ml2 from '../Assets/MakerLocks/2.jpg'
+import ml3 from '../Assets/MakerLocks/3.jpg'
+import ml4 from '../Assets/MakerLocks/4.jpg'
+import ml5 from '../Assets/MakerLocks/5.jpg'
+import ml6 from '../Assets/MakerLocks/6.jpg'
+import ml7 from '../Assets/MakerLocks/7.jpg'
+import ml8 from '../Assets/MakerLocks/8.jpg'
+import ml9 from '../Assets/MakerLocks/9.jpg'
+import ml10 from '../Assets/MakerLocks/10.jpg'
+import ml11 from '../Assets/MakerLocks/11.jpg'
+import ml12 from '../Assets/MakerLocks/12.jpg'
+import ml13 from '../Assets/MakerLocks/13.jpg'
+import ml14 from '../Assets/MakerLocks/14.jpg'
+import ml15 from '../Assets/MakerLocks/15.jpg'
+import ml16 from '../Assets/MakerLocks/16.jpg'
+import ml17 from '../Assets/MakerLocks/17.jpg'
+import ml18 from '../Assets/MakerLocks/18.jpg'
+import ml19 from '../Assets/MakerLocks/19.jpg'
+import ml20 from '../Assets/MakerLocks/20.jpg'
+import ml21 from '../Assets/MakerLocks/21.jpg'
+import ml22 from '../Assets/MakerLocks/22.jpg'
+import ml23 from '../Assets/MakerLocks/23.jpg'
+import ml24 from '../Assets/MakerLocks/24.jpg'
+import ml25 from '../Assets/MakerLocks/25.jpg'
+import ml26 from '../Assets/MakerLocks/26.jpg'
+import ml27 from '../Assets/MakerLocks/27.jpg'
+import ml28 from '../Assets/MakerLocks/28.jpg'
+import ml29 from '../Assets/MakerLocks/29.jpg'
 import lc1 from '../Assets/LamonCrusher/1.jpeg'
 import lc2 from '../Assets/LamonCrusher/2.jpeg'
 import kh1 from '../Assets/KeyHolders/1.png'
@@ -97,15 +97,15 @@ export const productCategories = [
         name: "Garlic Crusher",
         image: gc1,
         description: "High-quality garlic crushing tools for professional and home use",
-        category:'garlic-crusher',
+        category: 'garlic-crusher',
         is_publish: true
     },
     {
         id: "piler",
         name: "Piler",
-        image:p1,
+        image: p1,
         description: "Professional grade piler tools",
-        category:'piler',
+        category: 'piler',
         is_publish: true
     },
     {
@@ -113,7 +113,7 @@ export const productCategories = [
         name: "Nobes",
         image: n7,
         description: "Premium quality nobes for various applications",
-        category:'nobes',
+        category: 'nobes',
         is_publish: true
     },
     {
@@ -121,23 +121,23 @@ export const productCategories = [
         name: "Maker Locks",
         image: ml1,
         description: "High-security locks and locking mechanisms",
-        category:"maker-locks",
+        category: "maker-locks",
         is_publish: true
     },
     {
         id: "lamon-crusher",
         name: "Lamon Crusher",
-        image:lc1,
+        image: lc1,
         description: "Professional grade lamon crushers",
-        category:"lamon-crusher",
+        category: "lamon-crusher",
         is_publish: true
     },
     {
         id: "key-holders",
         name: "Key Holders",
-        image:kh1,
+        image: kh1,
         description: "Organized key storage solutions",
-        category:"key-holders",
+        category: "key-holders",
         is_publish: true
     },
     {
@@ -145,10 +145,10 @@ export const productCategories = [
         name: "Handles",
         image: h1,
         description: "Modern handles for cabinets and furniture",
-        category:"handles",
+        category: "handles",
         is_publish: true
     }
-]; 
+];
 
 // Garlic Crusher Products
 export const garlicCrusher = [

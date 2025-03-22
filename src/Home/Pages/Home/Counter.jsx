@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { Box, Typography } from "@mui/material";
 import { Icon } from "@iconify/react";
 import { ColorHelper } from "../../../Helper/ColorHelper";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 const Counter = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 3000 })
+    }, [])
+
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
 
     const counters = [
@@ -31,7 +38,7 @@ const Counter = () => {
                         justifyContent: 'center',
                         width: { xs: '100%', sm: '45%', md: '22%' },
                         textAlign: 'center'
-                    }}>
+                    }} data-aos="zoom=in">
                     <Box component={Icon} icon={counter.icon} sx={{ fontSize: { xs: '3rem', sm: '4rem' }, color: "#6dac71" }} />
                     <Typography variant="h4" fontWeight="bold" color={ColorHelper.appColorDark} sx={{ fontSize: { xs: '2rem', sm: '2.8rem' } }}>
                         {inView ? (
