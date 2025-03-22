@@ -5,8 +5,8 @@ import { ColorHelper } from "../../../Helper/ColorHelper";
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router-dom";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Info = () => {
 
