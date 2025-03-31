@@ -89,7 +89,7 @@ Best regards,`
                                     <p>{slide.description}</p>
                                     <a
                                         className="slide-btn"
-                                        href="#"
+                                        href="www.shivamproducs"
                                         onClick={(e) => {
                                             e.preventDefault();
                                             handleInquiryClick(slide.title);

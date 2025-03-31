@@ -12,6 +12,7 @@ import bgImage from '../../../Assets/background.avif';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useNavigate } from 'react-router-dom';
 import { productCategories } from '../../../Constants/ProductImages';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const OurProducts = () => {
     const navigate = useNavigate();
@@ -225,11 +226,10 @@ const OurProducts = () => {
                                     }}
                                 >
                                     <Box sx={{ position: "absolute", top: "3rem" }}>
-                                        <Box
-                                            component="img"
+                                        <LazyLoadImage
                                             src={product.image}
                                             alt={product.name}
-                                            sx={{
+                                            style={{
                                                 width: "10.5rem",
                                                 height: "10.5rem",
                                                 borderRadius: "20px",

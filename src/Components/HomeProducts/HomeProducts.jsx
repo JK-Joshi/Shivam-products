@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const HomeProducts = () => {
     const navigate = useNavigate();
@@ -130,11 +131,11 @@ const HomeProducts = () => {
                                     }}
                                 >
                                     <Box sx={{ position: "absolute", top: "3rem" }}>
-                                        <Box
-                                            component="img"
+                                        <LazyLoadImage
                                             src={product?.image}
                                             alt={product?.name}
-                                            sx={{
+                                            effect="blur"
+                                            style={{
                                                 width: "10.5rem",
                                                 height: "10.5rem",
                                                 borderRadius: "20px",

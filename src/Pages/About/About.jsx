@@ -3,6 +3,7 @@ import { Box, Container, Grid, Typography, Fade, Zoom } from '@mui/material';
 import { ColorHelper } from '../../Helper/ColorHelper';
 import { useInView, animate } from 'framer-motion';
 import image from '../../Assets/AboutImage.jpg'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Counter = ({ endValue, text }) => {
     const counterRef = useRef(null);
@@ -208,11 +209,11 @@ const About = () => {
                                     zIndex: 0,
                                 }
                             }}>
-                                <Box
-                                    component="img"
+                                <LazyLoadImage
                                     src={image}
                                     alt="About Shivam Products"
-                                    sx={{
+                                    effect="blur"
+                                    style={{
                                         width: '100%',
                                         height: { xs: '300px', md: '400px' },
                                         objectFit: 'cover',

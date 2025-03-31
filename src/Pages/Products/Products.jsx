@@ -1,69 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Box, Container, Grid, Typography, Button, Card, Fade, Zoom } from '@mui/material';
 import { ColorHelper } from '../../Helper/ColorHelper';
-import { useLocation, useNavigate } from 'react-router-dom';
 import { productCategories, allProducts } from '../../Constants/ProductImages';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Products = () => {
-    const location = useLocation();
-    const [selectedCategory, setSelectedCategory] = useState('all');
     const [showProducts, setShowProducts] = useState(false);
     const [categoryProducts, setCategoryProducts] = useState([]);
-    const [imagesLoaded, setImagesLoaded] = useState(false);
-    const [initialLoad, setInitialLoad] = useState(true);
     const [fadeIn, setFadeIn] = useState(true);
-    const preloadedImages = useRef(new Map());
-
-    // Preload all images on component mount
-    useEffect(() => {
-        const preloadImages = async () => {
-            const loadImage = (src) => {
-                return new Promise((resolve, reject) => {
-                    if (preloadedImages.current.has(src)) {
-                        resolve();
-                        return;
-                    }
-
-                    const img = new Image();
-                    img.src = src;
-                    img.onload = () => {
-                        preloadedImages.current.set(src, img);
-                        resolve();
-                    };
-                    img.onerror = reject;
-                });
-            };
-
-            try {
-                // Preload category images
-                const categoryPromises = productCategories.map(category =>
-                    loadImage(category.image)
-                );
-
-                // Preload product images
-                const productPromises = allProducts.map(product =>
-                    loadImage(product.productsImage)
-                );
-
-                await Promise.all([...categoryPromises, ...productPromises]);
-                setImagesLoaded(true);
-            } catch (error) {
-                console.error('Error preloading images:', error);
-                setImagesLoaded(true); // Set to true anyway to show content
-            }
-        };
-
-        preloadImages();
-    }, []);
-
-    useEffect(() => {
-        const params = new URLSearchParams(location.search);
-        const category = params.get('category') || 'all';
-        setSelectedCategory(category);
-    }, [location]);
 
     const filteredProductCategories = productCategories.filter(product => product.is_publish);
+
 
     const handleCategoryClick = (category) => {
         setShowProducts(true);
@@ -77,44 +25,9 @@ const Products = () => {
         setFadeIn(true);
     };
 
-    const getRandomSize = () => {
-        const sizes = [
-            { width: "200px", height: "200px" },
-            { width: "250px", height: "300px" },
-            { width: "300px", height: "250px" },
-            { width: "280px", height: "320px" },
-            { width: "320px", height: "280px" }
-        ];
-        return sizes[Math.floor(Math.random() * sizes.length)];
-    };
-
     const handleHover = () => {
         return ColorHelper.appColorDark;
     };
-
-    const getRandomDelay = () => {
-        return Math.random() * 0.5; // Random delay between 0 and 0.5 seconds
-    };
-
-    const getRandomRotation = () => {
-        return Math.random() * 10 - 5; // Random rotation between -5 and 5 degrees
-    };
-
-    if (!imagesLoaded) {
-        return (
-            <Box sx={{
-                minHeight: '100vh',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: '#fff',
-            }}>
-                <Typography variant="h5" color={ColorHelper.appColorDark}>
-                    Loading Products...
-                </Typography>
-            </Box>
-        );
-    }
 
     return (
         <Box sx={{
@@ -258,11 +171,11 @@ const Products = () => {
                                             }}
                                         >
                                             <Box sx={{ position: "absolute", top: "3rem" }}>
-                                                <Box
-                                                    component="img"
+                                                <LazyLoadImage
                                                     src={product?.image}
                                                     alt={product?.name}
-                                                    sx={{
+                                                    effect="blur"
+                                                    style={{
                                                         width: "10.5rem",
                                                         height: "10.5rem",
                                                         borderRadius: "20px",
@@ -368,7 +281,7 @@ const Products = () => {
                                             borderRadius: '20px',
                                             boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
                                             transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-                                            transform: initialLoad ? `rotate(${getRandomRotation()}deg)` : 'rotate(0deg)',
+                                            // transform: initialLoad ? `rotate(${getRandomRotation()}deg)` : 'rotate(0deg)',
                                             opacity: 0,
                                             animation: 'fadeIn 0.5s forwards',
                                             animationDelay: `${index * 100}ms`,
@@ -389,12 +302,12 @@ const Products = () => {
                                             }
                                         }}
                                     >
-                                        <Box
+                                        <LazyLoadImage
                                             className="product-image"
-                                            component="img"
                                             src={product.productsImage}
                                             alt={product.productImageAltText}
-                                            sx={{
+                                            effect="blur"
+                                            style={{
                                                 position: 'absolute',
                                                 top: 0,
                                                 left: 0,

@@ -3,6 +3,7 @@ import { Box, Container, Grid, Typography, Fade, Zoom } from '@mui/material';
 import { ColorHelper } from '../../Helper/ColorHelper';
 import serviceImage1 from '../../Assets/ServiceImage1.jpg'
 import serviceImage2 from '../../Assets/serviceImage2.jpg'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const services = [
     {
@@ -250,11 +251,11 @@ const Services = () => {
                                                 }
                                             }}
                                         >
-                                            <Box
-                                                component="img"
+                                            <LazyLoadImage
                                                 src={service.image}
                                                 alt={service.title}
-                                                sx={{
+                                                effect="blur"
+                                                style={{
                                                     width: '100%',
                                                     height: { xs: '300px', md: '400px' },
                                                     objectFit: 'cover',

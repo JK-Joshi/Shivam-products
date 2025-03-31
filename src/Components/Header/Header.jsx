@@ -86,18 +86,18 @@ const Header = () => {
                                 }}
                             >
                                 Products
-                                <KeyboardArrowDownIcon 
-                                    sx={{ 
+                                <KeyboardArrowDownIcon
+                                    sx={{
                                         transition: 'transform 0.3s ease',
                                         transform: isProductsOpen ? 'rotate(180deg)' : 'rotate(0)'
-                                    }} 
+                                    }}
                                 />
                             </Typography>
 
                             {/* Products Menu */}
-                            <Collapse 
-                                in={isProductsOpen} 
-                                timeout="auto" 
+                            <Collapse
+                                in={isProductsOpen}
+                                timeout="auto"
                                 unmountOnExit
                                 sx={{
                                     position: 'absolute',

@@ -330,7 +330,7 @@ const Footer = () => {
                     alignItems: 'center',
                     flexWrap: 'wrap',
                     gap: 2
-                }} data-aos="fade-up" data-aos-once="true">
+                }}>
                     <Typography variant="body2" sx={{ opacity: 0.9 }}>
                         © {new Date().getFullYear()} Shivam Products. All rights reserved.
                     </Typography>
