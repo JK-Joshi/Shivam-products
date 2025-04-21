@@ -2,7 +2,7 @@ import { Box, Typography, Drawer, IconButton } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../Assets/ShivamTextLogo_White.png';
+import logo from '../Assets/MakerLogo/Maker-logo-white.png';
 import { ColorHelper } from '../Helper/ColorHelper';
 
 const Header = () => {
@@ -58,8 +58,8 @@ const Header = () => {
                     src={logo}
                     sx={{
                         width: isSticky ?
-                            { xs: '10rem', sm: '10rem', md: '14rem' } :
-                            { xs: '12rem', sm: '16rem', md: '18rem' },
+                            { xs: '7rem', sm: '8rem', md: '8rem' } :
+                            { xs: '7rem', sm: '8rem', md: '10rem' },
                         transition: 'width 0.3s ease-in-out',
                     }}
                 />

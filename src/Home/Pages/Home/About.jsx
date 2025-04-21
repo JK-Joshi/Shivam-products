@@ -74,7 +74,14 @@ const AboutSection = ({ imageSrc, title, description }) => {
                             color: ColorHelper.appColorDark
                         }}
                     >
-                        <span style={{ fontWeight: 200 }}>About</span> SHIVAM PRODUCTS
+                        <span style={{ fontWeight: 200, fontSize: { xs: '1.3rem', sm: '1.5rem', md: '1.8rem', lg: '2rem' }, }}>About</span> Maker
+                    </Typography>
+                    <Typography
+                        sx={{
+                            color: ColorHelper.appColorDark,
+                            textAlign: { xs: 'center', md: 'left' },
+                        }}>
+                        A Product by Shivam Products
                     </Typography>
                     <Typography sx={{
                         fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem', lg: '1.3rem' },
@@ -83,7 +90,7 @@ const AboutSection = ({ imageSrc, title, description }) => {
                         mt: { xs: 2, sm: 2.5, md: 3 },
                         textAlign: { xs: 'center', md: 'left' }
                     }}>
-                        At Shivam Products, we specialize in <strong style={{ color: ColorHelper.appColorDark, fontWeight: 600 }}>high-quality Zinc die-casting manufacturing</strong>, delivering precision-engineered components for various industries. Equipped with state-of-the-art machinery, our production facility ensures superior craftsmanship and durability in every product we create.
+                        At Shivam Products, we specialize in <strong style={{ color: ColorHelper.appColorDark, fontWeight: 600 }}>high-quality Zinc die-casting manufacturing</strong>, with a strong focus on crafting premium zinc handle locks. Backed by state-of-the-art machinery, our facility ensures precision engineering, exceptional durability, and superior finish in every lock we produce — delivering excellence for both residential and commercial hardware needs.
                     </Typography>
                     <Box sx={{
                         width: '100%',

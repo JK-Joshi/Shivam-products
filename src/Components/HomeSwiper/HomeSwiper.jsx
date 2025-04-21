@@ -7,35 +7,38 @@ import "swiper/css/navigation";
 import "swiper/css/effect-creative";
 import "./HomeSwiper.css";
 import { Box } from "@mui/material";
-import image1 from '../../Assets/background.avif'
-import image2 from '../../Assets/infoImage.jpg'
+import image1 from '../../Assets/MakerLocks/1.JPG'
+import image2 from '../../Assets/MakerLocks/2.JPG'
+import image3 from '../../Assets/MakerLocks/3.JPG'
+import image4 from '../../Assets/MakerLocks/4.JPG'
 
 const slides = [
     {
         image: image1,
-        title: "Precision-Engineered Zinc Die Casting Solutions",
+        title: "Premium Zinc Handle Locks by Shivam Products",
         description:
-            "Delivering high-quality, durable, and precisely crafted zinc die-cast components for diverse industrial applications.",
+            "Explore our precision-crafted zinc handle locks, combining strength, style, and durability for modern hardware needs.",
     },
     {
         image: image2,
-        title: "Custom Zinc Casting for Superior Performance",
+        title: "Elegant and Durable Zinc Locks for Every Home",
         description:
-            "We specialize in manufacturing high-precision zinc die-cast parts that meet the highest industry standards.",
+            "Shivam Products offers premium zinc die-cast handle locks designed to elevate security and aesthetics.",
     },
     {
-        image: image1,
-        title: "Innovative Zinc Die Casting for Modern Industries",
+        image: image3,
+        title: "Zinc Die-Cast Hardware Locks – Built to Last",
         description:
-            "Empowering industries with advanced zinc die-casting solutions that ensure strength, reliability, and efficiency.",
+            "Engineered with care, our zinc locks deliver superior performance, perfect for both residential and commercial applications.",
     },
     {
-        image: image2,
-        title: "Enhancing Manufacturing with High-Quality Zinc Casting",
+        image: image4,
+        title: "Maker Locks – Precision in Every Lock",
         description:
-            "Providing top-tier zinc die-casting services tailored to your industry's needs with precision and expertise.",
+            "Manufacturing top-quality zinc handle locks with a focus on design, durability, and dependability.",
     }
 ];
+
 
 const HomeSwiper = () => {
     const handleInquiryClick = (slideTitle) => {

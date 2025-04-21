@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Container, Typography, Button, IconButton, Menu, MenuItem, Fade, Collapse } from '@mui/material';
 import { ColorHelper } from '../../Helper/ColorHelper';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../Assets/logo.png';
+import logo from '../../Assets/MakerLogo/Maker-logo-White.png';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
